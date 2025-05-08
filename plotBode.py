@@ -2,12 +2,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Filsti til CSV-filen
-filnavn = "Målinger/bode.csv"  # <-- Endre til ditt faktiske filnavn
+filnavn = "Målinger/bode.csv"  
 
-# Les data direkte (ingen rader å hoppe over)
 df = pd.read_csv(filnavn)
-
-# Rens kolonnenavn
 df.columns = [col.strip() for col in df.columns]
 
 # Hent frekvens og magnitude
