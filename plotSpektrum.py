@@ -3,12 +3,8 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import LogLocator
 
 # Filsti til CSV-filen
-filnavn = "Målinger/fordoblingSpectrum.csv"  # <-- Endre til riktig filnavn
-
-# Les data, hopp over de første 6 linjene (startlinje = 7)
+filnavn = "Målinger/fordoblingSpectrum.csv"  
 df = pd.read_csv(filnavn, skiprows=5)
-
-# Rens kolonnenavn
 df.columns = [col.strip() for col in df.columns]
 
 # Hent og konverter frekvens og RMS
@@ -21,7 +17,7 @@ frekvens = frekvens[mask]
 rms = rms[mask]
 
 # Sett alle verdier under terskel til null
-terskel = 1e-4  # Juster etter behov
+terskel = 1e-4  
 rms[rms < terskel] = 0
 
 # Plot
