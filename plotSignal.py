@@ -2,12 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Filsti til CSV-filen
-filnavn = "Målinger/fordobling.csv"  # <-- Endre til ditt filnavn
-
-# Les data, hopp over de første 19 linjene (starter på linje 20)
+filnavn = "Målinger/fordobling.csv"  
 df = pd.read_csv(filnavn, skiprows=19, encoding='latin1')
-
-# Rens kolonnenavn
 df.columns = [col.strip() for col in df.columns]
 
 # Hent og konverter verdier
