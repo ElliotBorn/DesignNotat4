@@ -45,6 +45,5 @@ def plott_signal(filsti):
     plt.tight_layout()
     plt.show()
 
-# Eksempel på kjøring
 if __name__ == "__main__":
-    plott_signal("en_periode_signal.csv")  # Bytt ut filnavnet om nødvendig
+    plott_signal("en_periode_signal.csv")  
